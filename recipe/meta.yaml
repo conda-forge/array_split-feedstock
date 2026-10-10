@@ -1,17 +1,17 @@
 {% set name = "array_split" %}
-{% set version = "0.6.5" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: "267953eb84808a70bba631a5ca1d516cfbb732d6e03ffbf7fa979c4f3ca69673"
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: "8d62c9fbfd2f135e9c5bf513422281f9b48301142afbd4ac79b162d3f1c7b1fd"
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
